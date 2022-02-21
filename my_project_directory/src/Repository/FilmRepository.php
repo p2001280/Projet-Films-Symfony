@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Repository;
-
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use App\Entity\Film;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -47,4 +49,5 @@ class FilmRepository extends ServiceEntityRepository
         ;
     }
     */
+   
 }

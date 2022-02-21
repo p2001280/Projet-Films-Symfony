@@ -5,25 +5,37 @@ namespace App\Entity;
 use App\Repository\FilmRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: FilmRepository::class)]
+/**
+ * @ORM\Entity(repositoryClass=FilmRepository::class)
+ */
 class Film
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private $id;
 
-    #[ORM\Column(type: 'string', length: 200)]
+    /**
+     * @ORM\Column(type="string", length=200)
+     */
     private $nom;
 
-    #[ORM\Column(type: 'string', length: 3000)]
+    /**
+     * @ORM\Column(type="string", length=400)
+     */
     private $description;
 
-    #[ORM\Column(type: 'integer')]
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $note;
 
-    #[ORM\Column(type: 'integer')]
-    private $nb_votants;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $nbVotants;
 
     public function getId(): ?int
     {
@@ -68,12 +80,12 @@ class Film
 
     public function getNbVotants(): ?int
     {
-        return $this->nb_votants;
+        return $this->nbVotants;
     }
 
-    public function setNbVotants(int $nb_votants): self
+    public function setNbVotants(int $nbVotants): self
     {
-        $this->nb_votants = $nb_votants;
+        $this->nbVotants = $nbVotants;
 
         return $this;
     }

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Form;
-use aharen\OMDbAPI;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -16,11 +15,12 @@ class FilmType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('description')
+            ->add('email', TextType::class, array('mapped' => false))
             ->add('note')
-            ->add('nb_votants')
+            ->add('nbVotants')
         ;
     }
+
 
     public function configureOptions(OptionsResolver $resolver): void
     {

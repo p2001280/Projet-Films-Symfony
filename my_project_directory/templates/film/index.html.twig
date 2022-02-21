@@ -8,25 +8,25 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Note</th>
-                <th>Nb_votants</th>
-                <th>actions</th>
+                <th><FONT SIZE = "4">Id</FONT></th>
+                <th><FONT SIZE = "4">Nom</FONT></th>
+                <th><FONT SIZE = "4">Description</FONT></th>
+                <th><FONT SIZE = "4">Note</FONT></th>
+                <th><FONT SIZE = "4">NbVotants</FONT></th>
+                <th><FONT SIZE = "4">actions</FONT></th>
             </tr>
         </thead>
         <tbody>
         {% for film in films %}
             <tr>
                 <td>{{ film.id }}</td>
-                <td>{{ film.nom }}</td>
-                <td>{{ film.description }}</td>
-                <td>{{ film.note }}</td>
-                <td>{{ film.nbVotants }}</td>
+                <td><FONT SIZE = "4"><mark>{{ film.nom }}</mark></FONT></td>
+                <td><FONT SIZE = "4">{{ film.description }}</FONT><br><br></td>
+                <td><FONT SIZE = "4">{{ film.note }}</FONT></td>
+                <td><FONT SIZE = "4">{{ film.nbVotants }}</FONT></td>
                 <td>
-                    <a href="{{ path('film_show', {'id': film.id}) }}">show</a>
-                    <a href="{{ path('film_edit', {'id': film.id}) }}">edit</a>
+                    <FONT SIZE = "4"><a href="{{ path('film_show', {'id': film.id}) }}">show</a></FONT>
+                    <FONT SIZE = "4"><a href="{{ path('film_edit', {'id': film.id}) }}">edit</a></FONT>
                 </td>
             </tr>
         {% else %}
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('film_new') }}">Create new</a>
+    <FONT SIZE = "4"><a href="{{ path('film_new') }}">Create new</a></FONT>
 {% endblock %}
